@@ -14,7 +14,6 @@ import { TechSupportPage } from './pages/TechSupportPage';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Function to navigate between pages (no longer uses React Router)
   const navigateTo = (page: string) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
@@ -64,7 +63,6 @@ function App() {
     };
   }, []);
 
-  // Page components mapping - removed React Router, using conditional rendering
   const pages: { [key: string]: JSX.Element } = {
     home: <Home onNavigate={navigateTo} />,
     contact: <Contact onNavigate={navigateTo} />,

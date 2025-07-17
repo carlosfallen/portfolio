@@ -4,17 +4,446 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO e acessibilidade -->
-    <meta name="description" content="Aplicativo web desenvolvido com Vite, React e TypeScript." />
-    <meta name="author" content="Seu Nome ou Empresa" />
+    <!-- SEO Principal -->
+    <title>CarlosTech - Soluções Tecnológicas</title>
+    <meta name="description" content="🚀 CarlosTech - Empresa especializada em soluções tecnológicas completas: desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles. Atendimento especializado para empresas e pessoas físicas." />
+    <meta name="keywords" content="carlostech, carlos tech, tecnológicas, suporte técnico, desenvolvimento web, manutenção computadores, suporte impressoras, servidores, consoles, consultoria TI, assistência técnica, react, nodejs, windows, linux, hardware, software, redes" />
+    <meta name="author" content="CarlosTech - Soluções Tecnológicas" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
     
-    <!-- Ícone da aba -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://carlostech.web.app" />
     
-    <title>Minha Aplicação Web</title>
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="CarlosTech - Soluções Tecnológicas Completas 🚀" />
+    <meta property="og:description" content="Empresa especializada em desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles. Soluções completas para sua empresa!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://carlostech.web.app" />
+    <meta property="og:image" content="https://carlostech.web.app/images/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://carlostech.web.app/images/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="CarlosTech - Soluções Tecnológicas - Desenvolvimento, Suporte e Consultoria" />
+    <meta property="og:site_name" content="CarlosTech" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Informações adicionais para Facebook -->
+    <meta property="fb:app_id" content="SEU_APP_ID_FACEBOOK" />
+    <meta property="article:author" content="https://www.facebook.com/carlostech" />
+    <meta property="article:publisher" content="https://www.facebook.com/carlostech" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@carlostech" />
+    <meta name="twitter:creator" content="@carlostech" />
+    <meta name="twitter:title" content="CarlosTech - Soluções Tecnológicas Completas 🚀" />
+    <meta name="twitter:description" content="Desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles. Soluções completas para sua empresa!" />
+    <meta name="twitter:image" content="https://carlostech.web.app/images/twitter-card.jpg" />
+    <meta name="twitter:image:alt" content="CarlosTech - Soluções Tecnológicas - Desenvolvimento, Suporte e Consultoria" />
+    <meta name="twitter:domain" content="carlostech.web.app" />
+    
+    <!-- LinkedIn específico -->
+    <meta property="linkedin:owner" content="carlostech" />
+    
+    <!-- WhatsApp otimizado (usa Open Graph) -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Telegram (usa Open Graph) -->
+    <meta property="og:image" content="https://carlostech.web.app/images/telegram-preview.jpg" />
+    
+    <!-- Discord (usa Open Graph) -->
+    <meta name="theme-color" content="#5865F2" />
+    
+    <!-- Favicon e Apple Touch Icon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple-specific meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CarlosTech" />
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/images/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/images/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/images/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/images/mstile-310x310.png" />
+    
+    <!-- DNS Prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="//api.github.com" />
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data (JSON-LD) - Organização -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CarlosTech",
+      "legalName": "CarlosTech Soluções Tecnológicas",
+      "url": "https://carlostech.web.app",
+      "logo": "https://carlostech.web.app/images/logo.png",
+      "image": "https://carlostech.web.app/images/company-photo.jpg",
+      "description": "Empresa especializada em soluções tecnológicas completas: desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles",
+      "founder": {
+        "@type": "Person",
+        "name": "Carlos"
+      },
+      "foundingDate": "2020",
+      "sameAs": [
+        "https://github.com/carlostech",
+        "https://linkedin.com/company/carlostech",
+        "https://twitter.com/carlostech",
+        "https://instagram.com/carlostech",
+        "https://www.facebook.com/carlostech"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR",
+        "addressRegion": "Brasil"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-XX-XXXXX-XXXX",
+        "contactType": "customer service",
+        "email": "contato@carlostech.web.app",
+        "availableLanguage": ["Portuguese", "English"]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brazil"
+      },
+      "knowsAbout": [
+        "Desenvolvimento Web",
+        "Suporte Técnico",
+        "Manutenção de Computadores",
+        "Suporte a Impressoras",
+        "Reparo de Celulares",
+        "Configuração de Servidores",
+        "Manutenção de Consoles",
+        "Consultoria em TI",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Windows",
+        "Linux",
+        "Hardware",
+        "Software",
+        "Redes"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) - Serviços -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Soluções Tecnológicas CarlosTech",
+      "description": "Serviços completos de tecnologia incluindo desenvolvimento web, suporte técnico, manutenção de equipamentos e consultoria",
+      "provider": {
+        "@type": "Organization",
+        "name": "CarlosTech"
+      },
+      "serviceType": "Technology Solutions",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brazil"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços CarlosTech",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desenvolvimento Web",
+              "description": "Criação de sites e aplicações web modernas com React, TypeScript e Node.js"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Suporte Técnico",
+              "description": "Assistência técnica especializada para computadores, impressoras e equipamentos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Manutenção de Computadores",
+              "description": "Reparo, atualização e otimização de computadores desktop e notebooks"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Suporte a Impressoras",
+              "description": "Configuração, reparo e manutenção de impressoras e multifuncionais"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reparo de Celulares",
+              "description": "Assistência técnica para smartphones e tablets Android e iOS"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Configuração de Servidores",
+              "description": "Instalação, configuração e manutenção de servidores Windows e Linux"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Manutenção de Consoles",
+              "description": "Reparo e manutenção de consoles PlayStation, Xbox e Nintendo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultoria em TI",
+              "description": "Consultoria especializada em tecnologia da informação para empresas"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) - Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "CarlosTech",
+      "description": "Empresa de soluções tecnológicas completas",
+      "url": "https://carlostech.web.app",
+      "telephone": "+55-XX-XXXXX-XXXX",
+      "email": "contato@carlostech.web.app",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.5505",
+        "longitude": "-46.6333"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, PIX",
+      "currenciesAccepted": "BRL"
+    }
+    </script>
+    
+    <!-- Structured Data (JSON-LD) - Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CarlosTech",
+      "url": "https://carlostech.web.app",
+      "description": "Site oficial da CarlosTech - Soluções Tecnológicas Completas",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CarlosTech"
+      },
+      "inLanguage": "pt-BR",
+      "copyrightYear": "2024",
+      "genre": "Technology",
+      "keywords": "soluções tecnológicas, suporte técnico, desenvolvimento web, manutenção computadores"
+    }
+    </script>
+    
+    <!-- Configurações de tema -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    
+    <!-- Verificação de propriedade (adicione quando necessário) -->
+    <!-- <meta name="google-site-verification" content="seu-codigo-aqui" /> -->
+    <!-- <meta name="msvalidate.01" content="seu-codigo-aqui" /> -->
+    <!-- <meta name="yandex-verification" content="seu-codigo-aqui" /> -->
+    <!-- <meta name="p:domain_verify" content="seu-codigo-pinterest" /> -->
+    
+    <!-- Configuração de idioma alternativo -->
+    <link rel="alternate" hreflang="pt-br" href="https://carlostech.web.app" />
+    <link rel="alternate" hreflang="en" href="https://carlostech.web.app/en" />
+    <link rel="alternate" hreflang="x-default" href="https://carlostech.web.app" />
+    
+    <!-- RSS Feed (se houver blog) -->
+    <link rel="alternate" type="application/rss+xml" title="CarlosTech - Blog RSS" href="https://carlostech.web.app/feed.xml" />
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+    
+    <!-- Informações adicionais para buscadores -->
+    <meta name="rating" content="General" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="language" content="Portuguese" />
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.country" content="Brazil" />
+    <meta name="geo.placename" content="Brazil" />
+    <meta name="copyright" content="© 2024 CarlosTech. Todos os direitos reservados." />
+    <meta name="designer" content="CarlosTech Soluções Tecnológicas" />
+    <meta name="publisher" content="CarlosTech" />
+    <meta name="web_author" content="CarlosTech" />
+    <meta name="reply-to" content="contato@carlostech.web.app" />
+    <meta name="owner" content="CarlosTech Soluções Tecnológicas" />
+    <meta name="url" content="https://carlostech.web.app" />
+    <meta name="identifier-URL" content="https://carlostech.web.app" />
+    <meta name="directory" content="submission" />
+    <meta name="category" content="Technology, Computer Support, Web Development, Technical Support" />
+    <meta name="coverage" content="Brazil" />
+    <meta name="distribution" content="Global" />
+    <meta name="target" content="businesses, individuals" />
+    <meta name="audience" content="businesses, consumers" />
+    <meta name="resource-type" content="document" />
+    <meta name="doc-type" content="Web Page" />
+    <meta name="doc-class" content="Living Document" />
+    <meta name="doc-rights" content="Public" />
+    
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.Title" content="CarlosTech - Soluções Tecnológicas Completas" />
+    <meta name="DC.description" content="Empresa especializada em soluções tecnológicas completas: desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles" />
+    <meta name="DC.creator" content="CarlosTech" />
+    <meta name="DC.subject" content="Technology Solutions, Technical Support, Web Development, Computer Repair" />
+    <meta name="DC.publisher" content="CarlosTech" />
+    <meta name="DC.contributor" content="CarlosTech Team" />
+    <meta name="DC.date" content="2024" />
+    <meta name="DC.type" content="Text" />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.identifier" content="https://carlostech.web.app" />
+    <meta name="DC.language" content="pt-BR" />
+    <meta name="DC.coverage" content="BR" />
+    <meta name="DC.rights" content="© 2024 CarlosTech" />
+    
+    <!-- Microdata -->
+    <meta itemprop="name" content="CarlosTech - Soluções Tecnológicas Completas" />
+    <meta itemprop="description" content="Empresa especializada em soluções tecnológicas completas: desenvolvimento web, suporte técnico, manutenção de computadores, impressoras, celulares, servidores e consoles" />
+    <meta itemprop="image" content="https://carlostech.web.app/images/og-image.jpg" />
+    
+    <!-- Pinterest Rich Pins -->
+    <meta name="pinterest-rich-pin" content="true" />
+    
+    <!-- Slack unfurling -->
+    <meta name="slack-app-id" content="SEU_SLACK_APP_ID" />
+    
+        <style>
+      body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+      /* Otimizações para preview em redes sociais */
+      .social-preview {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-family: 'Inter', sans-serif;
+        padding: 60px;
+        box-sizing: border-box;
+      }
+      
+      .social-preview h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      
+      .social-preview .subtitle {
+        font-size: 24px;
+        opacity: 0.9;
+        margin-bottom: 30px;
+      }
+      
+      .social-preview .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+      }
+      
+      .social-preview .service-item {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .social-preview .contact {
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+        font-size: 18px;
+        opacity: 0.8;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+        <!-- Preview oculto para redes sociais -->
+    <div class="social-preview">
+      <h1>CarlosTech 🚀</h1>
+      <p class="subtitle">Soluções Tecnológicas Completas</p>
+      <div class="services">
+        <span class="service-item">💻 Desenvolvimento Web</span>
+        <span class="service-item">🔧 Suporte Técnico</span>
+        <span class="service-item">🖥️ Manutenção PC</span>
+        <span class="service-item">🖨️ Suporte Impressoras</span>
+        <span class="service-item">📱 Reparo Celulares</span>
+        <span class="service-item">🖥️ Servidores</span>
+        <span class="service-item">🎮 Consoles</span>
+        <span class="service-item">💡 Consultoria TI</span>
+      </div>
+      <div class="contact">
+        📞 Atendimento Especializado
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -232,26 +232,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           )}
         </motion.button>
       </form>
-
-      {isPageVariant && (
-        <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-          <h4 className="font-medium text-gray-800 mb-3">Outras formas de contato:</h4>
-          <div className="space-y-2 text-sm text-gray-600">
-            <p className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>(89) 99433-3316</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <span>ca88321499@gmail.com</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp: (89) 99433-3316</span>
-            </p>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

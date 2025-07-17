@@ -7,21 +7,21 @@ interface AboutProps {
 
 const stats = [
   { icon: <Users />, value: "500+", label: "Clientes Satisfeitos" },
-  { icon: <Award />, value: "50+", label: "Prêmios Conquistados" },
+  { icon: <Award />, value: "10+", label: "Prêmios Conquistados" },
   { icon: <Target />, value: "98%", label: "Taxa de Sucesso" },
-  { icon: <Rocket />, value: "1000+", label: "Projetos Entregues" }
+  { icon: <Rocket />, value: "100+", label: "Projetos Entregues" }
 ];
 
 const team = [
   {
     name: "Carlos Augusto",
     role: "CEO & Fundador",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+    image: "/assets/carlos.jpg"
   },
   {
     name: "Taiza Viana",
     role: "CFO & CSO (Diretora de Planejamento e Finanças)",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+    image: "/assets/taiza.jpg"
   }
 ];
 

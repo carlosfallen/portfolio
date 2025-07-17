@@ -1,13 +1,13 @@
 {
   "hosting": {
-    "site": "carlosmm",
+    "site": "carlostech",
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
+      {
+        "source": "/site.webmanifest",
+        "destination": "/site.webmanifest"
+      },
       {
         "source": "**",
         "destination": "/index.html"
