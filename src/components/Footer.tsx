@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Newsletter } from './Newsletter';

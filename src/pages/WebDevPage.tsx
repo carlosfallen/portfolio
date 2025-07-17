@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Monitor, ChevronRight } from 'lucide-react';
 
-export function WebDevPage() {
+interface WebDevPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function WebDevPage({ onNavigate }: WebDevPageProps) {
   const features = [
     {
       title: "Sites Responsivos",

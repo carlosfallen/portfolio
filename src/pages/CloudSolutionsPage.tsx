@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Cloud, ChevronRight } from 'lucide-react';
 
-export function CloudSolutionsPage() {
+interface CloudSolutionsPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function CloudSolutionsPage({ onNavigate }: CloudSolutionsPageProps) {
   const features = [
     {
       title: "AWS",

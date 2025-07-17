@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import NetworkBackground from '../components/NetworkBackground';
-import { Newsletter } from '../components/Newsletter';
 import { serviceCategories } from './Services';
 import { useState, useEffect } from 'react';
 
-export function Home({ onNavigate }) {
+interface HomeProps {
+  onNavigate: (page: string) => void;
+}
+
+export function Home({ onNavigate }: HomeProps) {
   const [randomServices, setRandomServices] = useState([]);
 
   const getRandomServices = () => {
@@ -244,36 +247,6 @@ export function Home({ onNavigate }) {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16 bg-blue-600">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-8"
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Fique por Dentro das Novidades
-              </h2>
-              <p className="text-blue-100 text-sm sm:text-base">
-                Receba dicas exclusivas sobre tecnologia e fique sabendo dos nossos lançamentos
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Newsletter variant="standalone" className="bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/20" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

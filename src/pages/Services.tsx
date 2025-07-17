@@ -17,6 +17,10 @@ import {
   CheckCircle
 } from 'lucide-react';
 
+interface ServicesProps {
+  onNavigate?: (page: string) => void;
+}
+
 export const serviceCategories = [
   {
     id: 'manutencao',
@@ -123,7 +127,7 @@ const itemVariants = {
   }
 };
 
-export function Services() {
+export function Services({ onNavigate }: ServicesProps) {
   return (
     <div className="pt-20 bg-gray-50">
       {/* Header Section */}

@@ -3,7 +3,11 @@ import { MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { ContactForm } from '../components/ContactForm';
 import { motion } from 'framer-motion';
 
-export function Contact() {
+interface ContactProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function Contact({ onNavigate }: ContactProps) {
   return (
     <div className="pt-20 min-h-screen bg-gray-50">
       <section className="py-20">

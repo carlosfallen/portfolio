@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Database, ChevronRight } from 'lucide-react';
 
-export function DataManagementPage() {
+interface DataManagementPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function DataManagementPage({ onNavigate }: DataManagementPageProps) {
   const features = [
     {
       title: "Big Data",

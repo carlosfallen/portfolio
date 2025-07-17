@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Target, Rocket } from 'lucide-react';
 
+interface AboutProps {
+  onNavigate?: (page: string) => void;
+}
+
 const stats = [
   { icon: <Users />, value: "500+", label: "Clientes Satisfeitos" },
   { icon: <Award />, value: "50+", label: "Prêmios Conquistados" },
@@ -21,7 +25,7 @@ const team = [
   }
 ];
 
-export function About() {
+export function About({ onNavigate }: AboutProps) {
   return (
     <div className="pt-20">
       {/* Hero Section */}

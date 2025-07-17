@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Laptop, ChevronRight } from 'lucide-react';
 
-export function TechSupportPage() {
+interface TechSupportPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function TechSupportPage({ onNavigate }: TechSupportPageProps) {
   const features = [
     {
       title: "Help Desk",

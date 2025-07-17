@@ -14,12 +14,13 @@ import { TechSupportPage } from './pages/TechSupportPage';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Função para navegar entre páginas
-  const navigateTo = (page) => {
+  // Function to navigate between pages (no longer uses React Router)
+  const navigateTo = (page: string) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
     
-    const urls = {
+    // Update URL for better UX (optional - maintains URL state without routing)
+    const urls: { [key: string]: string } = {
       home: '/',
       contact: '/contato',
       services: '/servicos',
@@ -34,10 +35,11 @@ function App() {
     window.history.pushState({}, '', urls[page]);
   };
 
+  // Handle browser back/forward buttons
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname;
-      const pageMap = {
+      const pageMap: { [key: string]: string } = {
         '/': 'home',
         '/contato': 'contact',
         '/servicos': 'services',
@@ -55,15 +57,15 @@ function App() {
     };
 
     window.addEventListener('popstate', handlePopState);
-    handlePopState();
+    handlePopState(); // Set initial page based on URL
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
   }, []);
 
-  // ATUALIZEI AQUI: Passando onNavigate para todos os componentes
-  const pages = {
+  // Page components mapping - removed React Router, using conditional rendering
+  const pages: { [key: string]: JSX.Element } = {
     home: <Home onNavigate={navigateTo} />,
     contact: <Contact onNavigate={navigateTo} />,
     services: <Services onNavigate={navigateTo} />,

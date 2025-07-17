@@ -4,6 +4,10 @@ import { useForm } from 'react-hook-form';
 import { Check, AlertCircle, Calendar } from 'lucide-react';
 import { AppointmentScheduler } from '../components/AppointmentScheduler';
 
+interface BudgetProps {
+  onNavigate?: (page: string) => void;
+}
+
 type FormData = {
   company: string;
   name: string;
@@ -26,7 +30,7 @@ const services = [
   "Consultoria"
 ];
 
-export function Budget() {
+export function Budget({ onNavigate }: BudgetProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [showScheduler, setShowScheduler] = useState(false);
