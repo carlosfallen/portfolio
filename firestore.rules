@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Newsletter subscribers - allow read/write for authenticated users
+    match /newsletter_subscribers/{document} {
+      allow read, write: if true; // Allow public subscription
+    }
+    
+    // Contact messages - allow write for anyone, read for authenticated users only
+    match /contact_messages/{document} {
+      allow write: if true; // Allow anyone to send messages
+      allow read: if request.auth != null; // Only authenticated users can read
+    }
+    
+    // Appointments - allow write for anyone, read for authenticated users only
+    match /appointments/{document} {
+      allow write: if true; // Allow anyone to book appointments
+      allow read: if request.auth != null; // Only authenticated users can read
+    }
+    
+    // Admin collections - only authenticated users
+    match /admin/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Newsletter } from './Newsletter';
 
 export function Footer() {
   const socialLinks = [
@@ -10,12 +11,6 @@ export function Footer() {
     { icon: FaLinkedin, url: "https://www.linkedin.com/in/caugustofc/", label: "LinkedIn" }
   ];
 
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    // Aqui você pode adicionar a lógica para o newsletter
-    console.log('Newsletter enviado');
-  };
-  
   return (
     <footer className="bg-gray-900 text-white py-12 mt-auto ">
       <div className="container mx-auto px-4 ">
@@ -64,26 +59,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="col-span-1"
           >
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-              Inscreva-se para receber novidades e atualizações.
-            </p>
-            <form className="space-y-3" onSubmit={handleNewsletterSubmit}>
-              <input 
-                type="email" 
-                placeholder="Seu email" 
-                required
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-              />
-              <motion.button 
-                type="submit"
-                className="w-full bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Inscrever-se
-              </motion.button>
-            </form>
+            <Newsletter variant="footer" />
           </motion.div>
         </div>
 

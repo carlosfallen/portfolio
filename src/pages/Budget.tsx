@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { Check, AlertCircle } from 'lucide-react';
+import { Check, AlertCircle, Calendar } from 'lucide-react';
+import { AppointmentScheduler } from '../components/AppointmentScheduler';
 
 type FormData = {
   company: string;
@@ -28,6 +29,7 @@ const services = [
 export function Budget() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [showScheduler, setShowScheduler] = useState(false);
   
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
@@ -49,7 +51,7 @@ export function Budget() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,9 +63,47 @@ export function Budget() {
             <p className="text-xl text-gray-600">
               Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas
             </p>
+            
+            {/* Toggle Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <motion.button
+                onClick={() => setShowScheduler(false)}
+                className={`px-6 py-3 rounded-full font-medium transition-all ${
+                  !showScheduler 
+                    ? 'bg-blue-600 text-white shadow-lg' 
+                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Solicitar Orçamento
+              </motion.button>
+              <motion.button
+                onClick={() => setShowScheduler(true)}
+                className={`px-6 py-3 rounded-full font-medium transition-all flex items-center gap-2 ${
+                  showScheduler 
+                    ? 'bg-blue-600 text-white shadow-lg' 
+                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Calendar className="w-4 h-4" />
+                Agendar Consulta
+              </motion.button>
+            </div>
           </motion.div>
 
-          <motion.form
+          {showScheduler ? (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <AppointmentScheduler />
+            </motion.div>
+          ) : (
+            <motion.form
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -230,6 +270,7 @@ export function Budget() {
             {/* Status Messages */}
             <AnimatedStatusMessage status={submitStatus} />
           </motion.form>
+          )}
         </div>
       </section>
     </div>
