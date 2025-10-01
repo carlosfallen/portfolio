@@ -23,11 +23,16 @@ export function Footer() {
             className="col-span-1"
           >
             <div className="flex items-center space-x-2 mb-6">
-              <img 
-                src="./assets/logo.png" 
-                alt="Logo CarlosTech" 
-                className="h-8 w-auto object-contain"
-              />
+                <h1 
+                  style={{ 
+                    fontFamily: "'Gugi', cursive", 
+                    fontWeight: 400, 
+                    fontSize: '2.5rem',
+                    color: '#fff'
+                  }}
+                >
+                  KHARTECH
+                </h1>
             </div>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
               Transformando ideias em soluções tecnológicas inovadoras.

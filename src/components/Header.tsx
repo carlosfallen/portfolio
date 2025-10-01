@@ -11,6 +11,11 @@ export function Header({ onNavigate, currentPage }) {
   const isHomePage = currentPage === 'home';
   const shouldUseWhiteHeader = isScrolled || !isHomePage;
 
+  const style = document.createElement('style');
+  style.textContent = `
+    @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+  `;
+  document.head.appendChild(style);
   useEffect(() => {
     setIsMounted(true);
     
@@ -56,7 +61,16 @@ export function Header({ onNavigate, currentPage }) {
           <div className="h-16 sm:h-20 flex items-center justify-between">
             <div className="flex-shrink-0">
               <div className="p-2 rounded-lg bg-blue-600">
-                <img src="./assets/logo.png" alt="Logo" className="h-6 sm:h-8 w-auto object-contain" />
+                                <h1 
+                  style={{ 
+                    fontFamily: "'Gugi', cursive", 
+                    fontWeight: 400, 
+                    fontSize: '2.5rem',
+                    color: '#fff'
+                  }}
+                >
+                  KHARTECH
+                </h1>
               </div>
             </div>
             <div className="md:hidden flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-blue-600 flex items-center justify-center">
@@ -131,16 +145,21 @@ export function Header({ onNavigate, currentPage }) {
               onClick={() => onNavigate('home')} 
               className="cursor-pointer"
             >
-              <div className={`p-2 rounded-lg transition-all duration-300 ${
+              <div className={`px-3 rounded-2xl transition-all duration-300 ${
                 shouldUseWhiteHeader 
                   ? 'bg-blue-600 shadow-md' 
                   : 'bg-transparent'
               }`}>
-                <img
-                  src="./assets/logo.png"
-                  alt="Logo da empresa"
-                  className="h-6 sm:h-8 w-auto object-contain"
-                />
+                <h1 
+                  style={{ 
+                    fontFamily: "'Gugi', cursive", 
+                    fontWeight: 400, 
+                    fontSize: '2.5rem',
+                    color: '#fff'
+                  }}
+                >
+                  KHARTECH
+                </h1>
               </div>
             </div>
           </motion.div>

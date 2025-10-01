@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Caminho da imagem base e logo
-logo_path = "/mnt/data/umbrel/home/apps/carlostech/public/assetslogo.png"           # logo grande horizontal
+logo_path = "/mnt/data/umbrel/home/apps/carlostech/public/assets/logo.png"           # logo grande horizontal
 favicon_path = "/mnt/data/umbrel/home/apps/carlostech/public/assets/favicon.png"     # logo quadrada estilizada com "ct"
 
 # Pasta de saída

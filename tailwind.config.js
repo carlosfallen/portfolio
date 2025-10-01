@@ -13,6 +13,7 @@ export default {
         },
       },
       fontFamily: {
+        gugi: ["'Gugi'", "cursive"],
         sans: ['Poppins', 'sans-serif'],
       },
     },

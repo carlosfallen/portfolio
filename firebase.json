@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "carlostech",
+    "site": "khartech",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
